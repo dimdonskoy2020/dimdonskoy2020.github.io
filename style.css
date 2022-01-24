@@ -1,0 +1,241 @@
+/*
+:root {
+	font-size: calc(1vw + 0.7em);
+}*/
+body {
+	font-family: "TT Lakes", sans-serif;
+	background: #F8F8F8;
+}
+.navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	min-width: 320px;
+	height: 88px;
+	align-items: center;
+	background-color: #fff;
+}
+
+.leftside-navigation {
+	display: flex;
+	align-items: center;
+
+}
+
+.rightside-navigation__menu {
+	display: flex;
+	flex-direction: row;
+}
+.leftside-navigation__logo {
+	margin-left: 16px;
+}
+.burger-menu {
+	margin-left: 16px;
+}
+
+.rightside-navigation__menu li {
+	margin-right: 16px;
+}
+.rightside-navigation__menu li:nth-child(4) {
+	position: relative;
+}
+
+.rightside-navigation__menu li:nth-child(4)::before {
+	position: absolute;
+	content: "";
+	width: 2px;
+	height: 32px;
+	background-color: #eaeaea;
+	left: -20px;
+	top: 5px;
+	border-radius: 1px;
+}
+.rightside-navigation__menu li:nth-child(1),
+.rightside-navigation__menu li:nth-child(2),
+.rightside-navigation__menu li:nth-child(3) {
+	display: none;
+}
+
+/*Услуги и сервисы*/
+.services__heading {
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+.services__heading h1 {
+	position: relative;
+	font-size: 28px;
+	line-height: 40px;
+	letter-spacing: -0.6px;
+	font-weight: bold;
+	color: #1B1C21;
+	margin-right: 16px;
+	margin-left: 16px;
+}
+.services__heading h1:before {
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 40px;
+	border-radius: 5px;
+	left: -20px;
+	background: #41F6D7;
+}
+.services__desctop-menu {
+	display: none;
+}
+.services__menu ul {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	overflow-x: hidden;
+	margin-left: 16px;
+}
+.services__menu ul li {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	height: 40px;
+	padding-left: 16px;
+	padding-right: 16px;
+	box-sizing: border-box;
+}
+.current {
+	border: 2px solid #b8ffec;
+	border-radius: 6px;
+	background-color: #FFF;
+}
+
+
+.services__menu ul a {
+	line-height: 24px;
+	font-size: 16px;
+	color: #7E7E82;
+	letter-spacing: -0.2px;
+	text-decoration: none;
+}
+/*Приимущества*/
+.features {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 24px;
+}
+.features__info  {
+	margin-bottom: 16px;
+}
+.read-more {
+	margin-left: 24px;
+	text-decoration: none;
+	color: #1B1C21;
+	font-weight: 600;
+}
+.read-more span {
+	margin-left: 12px;
+}
+.read-more:hover path {
+	fill: rgb(65, 178, 90);
+}
+.overfow-p {
+	margin: 0 16px 16px 16px;
+}
+.overfow-p p {
+	font-weight: 400;
+	color: #1b1c21;
+}
+.overfow-p p:nth-child(2) {
+	display: none;
+}
+.hidden {
+	display: none;
+}
+.features__image {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.features__image img {
+	min-width: 320px;
+	flex-basis: 75%;
+}
+
+/*Медиа запросы по ширине экрана*/
+@media (min-width: 768px) {
+	.rightside-navigation__menu li:nth-child(1),
+	.rightside-navigation__menu li:nth-child(2),
+	.rightside-navigation__menu li:nth-child(3) {
+		display: flex;
+	}
+	.rightside-navigation__menu li:nth-child(3) {
+		margin-right: 38px;
+	}
+	.leftside-navigation__logo {
+		position: relative;
+		margin-left: 38px;
+	}
+	.leftside-navigation__logo::before {
+		position: absolute;
+		content: "";
+		width: 2px;
+		height: 32px;
+		background-color: #eaeaea;
+		left: -20px;
+		top: 11px;
+		border-radius: 1px;
+	}
+	.services__menu ul {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	.features {
+		justify-content: center;
+		flex-wrap: nowrap;
+	}
+	.overfow-p p:nth-child(2) {
+		display: inline-block;
+	}
+	.features__info {
+		width: 50%;
+	}
+	.features__image {
+		width: 50%;
+	}
+	.features__image img {
+		min-width: 360px;
+		flex-basis: 100%;
+	}
+}
+
+@media (min-width: 1120px) {
+	header {
+		display: none;
+	}
+	.services__heading {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 42px;
+	}
+	.services__heading h1 {
+		vertical-align: middle;
+	}
+	.services__desctop-menu {
+		display: flex;
+	}
+	.services__desctop-menu ul,
+	.services__desctop-menu ul li {
+		display: flex;
+		align-items: center;
+	}
+	.services__desctop-menu span {
+		margin-right: 9px;
+	}
+	.services__desctop-menu a {
+		margin-right: 32px;
+	}
+	.features__image {
+		margin-right: 29px;
+	}
+	.hidden {
+		display: inline;
+	}
+}
