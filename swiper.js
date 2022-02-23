@@ -5,6 +5,8 @@ new Swiper('.swiper', {
     prevEl: '.swiper-button-prev'
   },
   loop: true,
+  speed: 1000,
+  freeMode: true,
   //Навигацияъ
   // буллеты, текущее положение, прогрессбар
   pagination: {
